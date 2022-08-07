@@ -1,0 +1,58 @@
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.homeButton {
+  background-color: White;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+
+.homeImage {
+  width: 6em;
+  float: left;
+  /*border: 2px solid Orange;*/
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  /*width: 300px;*/
+  max-width: 20%;
+  height: auto;
+}
+
+video {
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 5px;
+  /*width: 300px;*/
+  /*max-width: 49%;*/
+  height: auto;
+  float:left;
+}
+
+div.polaroid {
+  /*width: 80%;*/
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+#code {
+    /*max-width:49%;*/
+    height:600px;
+    overflow:scroll;
+    border:4px double #DEBB07;
+    float:left;
+}

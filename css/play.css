@@ -1,0 +1,17 @@
+/*<style>*/
+
+.homeButton {
+  background-color: White;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+
+.homeImage {
+  width: 6em;
+  float: left;
+  /*border: 2px solid Orange;*/
+}

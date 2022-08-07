@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="resume.css">
+
+    <script>
+        function algol() {
+            window.open("../algol60/Ionus_Algol_60_Web_Intro.html", "_self") }
+        function bogong() { window.open("../bogong/bogong.html", "_self") }
+        function home() { window.open("../index.html", "_self") }
+        function print() {window.open("../documents/resume.pdf", "_self")}
+    </script>
+</head>
+<body bgcolor="Wheat">
+
+<img class="homeImage" src="../images/iologo.png" alt="Home" onclick="home()" />
+<button class="orangeButton" onclick="toOrange()">Orange</button>
+<button class="greenButton" onclick="toGreen()">Green </button>
+<button class="blueButton" onclick="toBlue()"> Blue </button>
+<button class="redButton" onclick="toRed()"> Red  </button>
+<button class="homeButton" onclick="home()">Home</button>
+<button class="hideButton" onclick="hideAll()">Hide All</button>
+<button class="showButton" onclick="showAll()">Show All</button>
+<button class="printButton" onclick="print()">Print Friendly</button>
+<!-- <a href="../documents/resume_20191030_NR.pdf">Print Ready Version</a> -->
+<br>
+<h2 style="text-align:center">Resume of John Green</h2>
+<div class="row">
+  <div class="column">
+    <h2>Overview</h2>
+        <button class="accordion">Contact Details</button>
+        <div class="panel">
+          <p>Mobile : 04 1812 0955<br>
+             Email : jgreen@ionus.com.au</p>
+        </div>
+
+        <button class="accordion">Citizenship</button>
+        <div class="panel">
+        <p>Australian</p>
+       </div>
+
+        <button class="accordion">Qualifications</button>
+        <div class="panel">
+        <p>Masters Preliminary.<br>
+        University of Western Australia.<br>
+        Bachelor of Applied Science (Computer Science)<br>
+        Royal Melbourne Institute of Technology Ltd.</p>
+        </div>
+        <button class="accordion"> Ionus Company</button>
+        <div class="panel">
+        <p>1993 - Present<br>
+                Director/Owner - Ionus Pty Ltd,<br>
+        </div>
+        <button class="accordion">Skills</button>
+        <div class="panel">
+            <p>C and some C++<br>
+               Shell Scripting, Python, Perl<br>
+               Some Java programming and Java VM programming.<br>
+               Some JavaScript and HTML<br>
+               FORTRAN and PASCAL.<br>
+               Other languages such as Icon,Swift and Kotlin knowledge.<br>
+               QNX and QNX Windows.<br>
+               Linux Operating System.<br>
+               Unix Operating System.<br>
+               MS Windows<br>
+               OS-9
+                </p>
+        </div>
+
+        <button class="accordion">Interests</button>
+        <div class="panel">
+        <p>
+            Computer language design.<br>
+            Computer Graphics.<br>
+            Programming techniques and methodologies.<br>
+            Reading, Badminton, Jigsaw puzzles.</p>
+        </div>
+
+        <button class="accordion">Organizations</button>
+        <div class="panel">
+        <p>Member of the Association for Computing Machinery (ACM).<br>
+           Member of the Institute of Electrical and Electronics Engineers
+           (IEEE).<br>
+           Member of the IEEE Computer Society<br>
+           Member of the Planetary Society
+           </p>
+        </div>
+
+        <button class="accordion">Projects</button>
+        <div class="panel">
+            <p>
+            These are some projects I have dabbled with over the years.
+            </p>
+            <br>
+            <table>
+              <tr>
+                <td>
+		        <img src="../algol60/algol60_svg.png"
+                                          alt="Algol 60 Compiler" width="30%"
+                   onclick="algol()" />
+                </td>
+                <td><a href="../algol60/Ionus_Algol_60_Web_Intro.html">
+                        Algol Compiler.</a>
+                    The Ionus Algol 60 compiler. Current
+                    version 1.0 but version 1.1 is nearly complete.
+                </td>
+              </tr>
+              <tr>
+                <td>
+		        <img src="../bogong/blobby.png" alt="Bogong"  width="30%"
+                    onclick="bogong()"/>
+                </td>
+                <td><a href="../bogong/bogong.html">Bogong Language</a>
+                    based on Forth and inspired by Jim Blinn's
+                    article.
+                </td>
+              </tr>
+            </table>
+        </div>
+
+  </div>
+  <div class="column">
+  <h2>Work Experience</h2>
+        <button class="accordion">2018</button>
+        <div class="panel">
+        <p>Linux Network Developer<br>
+        HSD<br>
+        (a) Written tests for testing performance of various applications.<br>
+        (b) Analysis and study of performance critical code.</p>
+        </div>
+
+        <button class="accordion">2012 - 2018</button>
+        <div class="panel">
+        <p>Senior Software Engineer - QuintessenceLabs<br>
+        (a) Developed C KMIP client API product which is used in VMWare's
+            products. Includes a language to describe Key Management functions.
+            <br>
+        (b) Other APIs for PKCS#11.<br>
+        (c) Wrote a simple CI for configuring the QuintessenceLabs Key Manager
+            product.<br>
+        (d) Preliminary work on a Java, Python and C# interface to the KMIP
+            client API.<br>
+        (e) Tested the Key manager Web UI with Selenium.</p>
+        </div>
+                
+        <button class="accordion">2012</button>
+        <div class="panel">
+        <p>Senior Software Engineer - Bureau of Meteorology<br>
+        Porting C Programs from HP-UX to Linux.<br>
+        Firmware Consultant - Axxin<br>
+        Consultant on Firmware matters..</p>
+        </div>
+        <button class="accordion">2007 - 2011</button>
+        <div class="panel">
+        <p>Supply Software for Freestyle Energy<br>
+        (a) Supplied software to Freestyle Energy.<br>
+        (b) Software (which I designed and wrote) consisting of:<br>
+            Updates and improvements to the C compiler, assembler and linker.<br>
+            Wrote the Librarian to take advantage of the improved linker.<br>
+        (c) Ports of the Freestyle Virtual Machine (which I designed and wrote)
+            and Freestyle RTOS (which I co-designed and wrote).<br>
+            1) Ported the Freestyle VM to uC/OS Operating System including
+               file system.<br>
+            2) Ported VM and Freestyle RTOS  to PIC24 processor.<br>
+            3) Ported the VM to Linux.<br>
+        (d) Developed handlers for various communication platforms such as
+            Zigbee and Coronis.</p>
+        </div>
+
+        <button class="accordion">2006 - 2007</button>
+        <div class="panel">
+        <p>Software Developer - Symstream Ltd<br>
+        (a) Developed and wrote the high availability subsystem for the
+            Symstream gateways.</p>
+        </div>
+
+        <button class="accordion">2005 - 2006</button>
+        <div class="panel">
+        <p>System support, software developer - ACTTAB<br>
+        (a) Wrote software that interfaced ACTTAB to TABCORP for the ACTTAB
+            wagering system in FORTRAN.</p>
+        </div>
+        <button class="accordion">2004 - 2005</button>
+        <div class="panel">
+        <p>Various Internal Software - Ionus Pty Ltd<br>
+        (a) Wrote software in PERL to extract data from mini-discs.<br>
+        (b) Web site set up and development.<br>
+        (c) Written PHP and Java accessing MySQL on Linux. Simple web
+            development on Linux and Apache using HTML.<br>
+        (d) Helping others with HTML, Java and JavaScript.</p>
+        </div>
+
+        <button class="accordion">2001 - 2004</button>
+        <div class="panel">
+        <p>Supply Software for Device - Omega Industries<br>
+        Supplied software to Omega Industries Pty Ltd.
+        Software consisting of:<br>
+        (a) C compiler for a virtual machine and virtual machine assembler<br>
+        (b) Virtual machine on a PIC  micro processor<br>
+        (c) Operating System on a PIC  micro processor<br>
+        (d) Flash file system on a PIC  micro processor.<br>
+        (e) Algorithm and support software application running on the VM.</p>
+        </div>
+
+        <button class="accordion">2000 - 2001</button>
+        <div class="panel">
+        <p>C/C++ Programming - Ericsson Australia<br>
+            (a) Fixed problems, made enhancements to proprietary software.</p>
+        </div>
+        <button class="accordion">2000</button>
+        <div class="panel">
+        <p>Satellite Product Development - NEC Australia<br>
+            (a) More improvements to the S2 satellite phone production test.</p>
+        </div>
+        <button class="accordion">1999 - 2000</button>
+        <div class="panel">
+        <p>Department of Defense with NEC Australia - Ionus Pty Ltd<br>
+            (a) Produced a version of the DEFAUSSAT software for doing local
+                monitoring and tested software for Y2K compliance.<br>
+                Provided many copies and delivered them to site with testing
+                and training.</p>
+        </div>
+
+        <button class="accordion">1997 - 1999</button>
+        <div class="panel">
+        <p>ICONet Project - NEC Australia<br>
+            (a) Verification and Validation of the Terrestrial Network Manager
+                (TNM) software with ICONet.<br>
+            (b) Developed interface to communicate with and configure the new
+                RPN (Solaris based VME system) for ICONet.<br>
+            (c) Wrote simulations of loads and performance of the TNM in
+                Visual Basic<br>
+            (d) Assisted with the design of the MMI for the TNM for ICONet.<br>
+            (e) Specification of the MMI screens.<br>
+            (f) Assisted in the development of the portable load generator and
+                the implementation of the SS7 messaging.<br>
+            (g) Coded up the messaging for simulation for MT and MO calls based
+                on GSM with ICO's specific additions for the portable load
+                generator (call simulator).</p>
+        </div>
+        <button class="accordion">1996 - 1997</button>
+        <div class="panel">
+        <p>Radio Design and Development - NEC Australia<br>
+           (a) Updated legacy software for the production testing of satellite
+               phones.<br>
+           (b) Designed and implemented a MIB in the S2 satellite phone. The S2
+               uses OS-9.<br>
+           (c) Designed and implemented a language to describe the MIB and a
+               compiler to compile the MIB.<br>
+           (d) Designed a transmission protocol and messaging similar to SNMP
+               based on OSI Managed Objects..</p>
+        </div>
+
+        <button class="accordion">1996</button>
+        <div class="panel">
+        <p>Software Developer - Convergent Systems<br>
+           Worked on a custom GIS for Bell South with Convergent systems in C++.
+        </p>
+        </div>
+
+        <button class="accordion">1994 - 1995</button>
+        <div class="panel">
+        <p>Supplied Department of Defense through - NEC Australia<br>
+           Designed, Programmed, Implemented and Delivered a new implementation
+           of the Defense Australia Satellite (DEFAUSAT) Earth station
+           monitoring software running on QNX and QNX windows in C.</p>
+        </div>
+        <button class="accordion">1993 - 1994</button>
+        <div class="panel">
+        <p>BHP Petroleum<br>
+           Ported graphics plotting program written in FORTRAN from DEC VMS to
+           HPUX.<br>
+           Telecom Australia<br>
+           Test coordinator for Telecom's TESAMS system.</p>
+        </div>
+
+        <button class="accordion">1987 - 1993</button>
+        <div class="panel">
+        <p>Senior Analyst/Programmer - TUSC Computer Systems<br>
+           Wrote extensive software in FORTRAN and some C on HP1000 RTE-A ,
+           HP-UX and DOS. Some Pascal programming..</p>
+        </div>
+
+        <button class="accordion">1984 - 1987</button>
+        <div class="panel">
+        <p>Systems Engineer - Hewlett-Packard<br>
+           Gave courses in FORTRAN to customers.<br>
+           Supported HP Technical User Group and held customer accounts.<br>
+           Also wrote FORTRAN code inhouse to correct problems.<br>
+           Phone in support for HP1000 RTE-A systems for southern Australia.</p>
+        </div>
+        <button class="accordion">1980 - 1984</button>
+        <div class="panel">
+        <p>Systems Programmer - Department of Lands and Surveys<br>
+           Wrote relational database system in FORTRAN , Landsat image
+           processing software in FORTRAN, other applications in FORTRAN.<br>
+           Considerable FORTRAN code and assembler on PDP-11 RSX-11M and some
+           UNIVAC 1160</p>
+        </div>
+
+        <button class="accordion">1982</button>
+        <div class="panel">
+        <p>Part-time Tutor (Computing) -
+           Western Australian Institute of Technology.<br>
+           Lectured PASCAL to students.</p>
+        </div>
+
+        <button class="accordion">1978 - 1979</button>
+        <div class="panel">
+        <p>Tutor (Computer Science) -
+           Royal Melbourne Institute of Technology Ltd.<br>
+           Taught (lectured) FORTRAN to Engineering students for two years.<br>
+           Tutored PASCAL to Computer Science students..</p>
+        </div>
+  </div>
+</div>
+
+<script src="resume.js"></script>
+
+</body>
+</html>

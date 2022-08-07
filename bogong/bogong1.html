@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bogong.css">
+<link rel="icon" type="image/jpg" href="450-bogong-moth_icon.jpg">
+
+
+</head>
+<title>Bogong</title>
+<body bgcolor="White">
+<!-- <body bgcolor="Aquamarine"> -->
+<!--
+<div class="polaroid">
+  <img src="bogong_moth.jpeg" alt="Bogong Moth" style="width:100%">
+  <div class="container">
+  <p>Bogong Moth</p>
+  </div>
+</div>
+-->
+
+
+<!--<img src="bogong_moth.jpeg" alt="Bogong Moth" align=left>-->
+<img src="450-bogong-moth.jpg" alt="Bogong Moth" align=left style="hspace:5">
+<p>
+<h2 style="text-align:center">Bogong</h2>
+</p>
+<!--<br clear="left" /> -->
+<p>
+Having found Forth many years ago I was reading "Jim Blins Corner"<sup>[1]</sup>
+when he described a simple language to describe animation of his "blobby man".
+I thought gee that could almost be Forth so I decided to implement a Forth in C.
+Forth for me was a bit restrictive so I added floating point constants, 32 bit
+integers and double quoted strings ("...") just to make life easy.
+</p>
+<p>
+I also added builtin transformation words (equivalent to Jim's) and basic
+graphics words.  Also predefined unit sphere, cube and pyramid.<br>
+I called this new version of Forth Bogong after the Bogong moth.
+</p>
+<p>
+Here are some examples of Bogong:
+</p>
+<p style="font-style:italic">
+[1] Jim Blinn's Corner
+IEEE Computer Graphics and Applications October 1987<br>
+and also published in<br>
+Jim Blinn's Corner, Chapter 3 Morgan Kaufmann Publishers Inc, 1996
+ISBN 1-55860-387-5
+</p>
+<div>
+<!-- <video id="video" controls preload="metadata" width="400" height="400" poster="Movie6.jpeg" align=left> -->
+<video id="video" controls preload="metadata" poster="Movie6.jpeg" muted >
+    <!-- <source src="movie6.ogv" type="video/ogg"> -->
+    <source src="movie6_6.mp4" type="video/mp4">
+</video>
+
+<!--<div style="width:600px;height:600px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;border:4px double #DEBB07;"> -->
+<!-- <div id="code" style="width:550px;height:600;overflow:scroll;border:4px double #DEBB07; float:left"> -->
+<div id="code" >
+<pre><code>
+VARIABLE XLOOK
+VARIABLE YLOOK
+VARIABLE ZLOOK
+VARIABLE ANGLE
+
+: SCENE
+   60 DELAY FRAME
+   PUSH 7 COLOUR GRID POP
+   PUSH 0. 0. 1. TRAN 20. DEG 3 ROT 4 COLOUR CUBE POP
+   PUSH .3 .4 .5 SCAL -5. -3.8 1. TRAN 12 COLOUR CUBE POP
+   PUSH 0. 0. 3. TRAN 20. DEG 3 ROT 3 COLOUR SPHERE POP
+   PUSH
+      14 COLOUR 2. -2. 0. MOVE 1.5 -1.5 2. DRAW 1. -2. 0. DRAW 
+      1. -1. 0. DRAW 1.5 -1.5 2. DRAW 2. -1. 0. DRAW 2. -2. 0. DRAW
+      1. -2. 0. DRAW DROP DROP 1. -1. 0. MOVE 2. -1. 0. DRAW DROP DROP
+   POP
+   ANGLE @ 1.0 f+ DEG DUP ANGLE ! DUP DUP 1 ROT 2 ROT 3 ROT
+;
+
+: MOVIE BEGIN SCENE 1 -  DUP 0 = UNTIL ;
+
+0. 0. 1.0 1.0 VIEWPORT
+0. DEG ANGLE !
+
+45. DEG 6.2 11.8 PERS 0. -1.41 9. TRAN -80. DEG 1 ROT 48. DEG 3 ROT
+1. 1. -1. SCAL
+
+1000 DELAY
+360 MOVIE
+2000 DELAY
+FINISH
+</code></pre>
+</div>
+</div>
+<br>
+<br clear="left" />
+<p>
+    Here is Jim Blinns blobby man in Bogong.<br>
+</p>
+<div>
+<!-- <video id="video" controls preload="metadata" width="400" height="400" poster="Movie6.jpeg" align=left> -->
+<video id="video" controls preload="metadata" poster="blobby.png" muted >
+<!-- <source src="dance.ogv" type="video/ogg"> -->
+    <source src="dance.mp4" type="video/mp4">
+</video>
+
+<!--<div style="width:600px;height:600px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;border:4px double #DEBB07;"> -->
+<!-- <div id="code" style="width:550px;height:600;overflow:scroll;border:4px double #DEBB07; float:left"> -->
+<div id="code" >
+<pre><code>
+: CHS 0. SWAP f- ;
+VARIABLE RZM 0. DEG ,
+VARIABLE FOV 45. DEG ,
+VARIABLE ZN 5.17 ,
+VARIABLE ZF 10.7 ,
+VARIABLE XSCR -0.1 ,
+VARIABLE YSCR -1.6 ,
+VARIABLE ZSCR 7.9 ,
+VARIABLE BACK -90. DEG ,
+VARIABLE SPIN -30. DEG ,
+VARIABLE TILT 0. DEG ,
+VARIABLE XLOOK 0. ,
+VARIABLE YLOOK 0. ,
+VARIABLE ZLOOK 0. ,
+VARIABLE XM 0. ,
+VARIABLE YM 0. ,
+VARIABLE ZM 1.75 ,
+VARIABLE EXTEN 0. DEG ,
+VARIABLE ROTAT 0. DEG ,
+VARIABLE BTWIS 0. DEG ,
+VARIABLE NOD 0. DEG ,
+VARIABLE NECK 0. DEG ,
+VARIABLE RHIP 0. DEG ,
+VARIABLE LHIP 0. DEG ,
+VARIABLE LSID 0. DEG ,
+VARIABLE RSID 0. DEG ,
+VARIABLE ROUT 0. DEG ,
+VARIABLE LOUT 0. DEG ,
+VARIABLE LSHOU 0. DEG ,
+VARIABLE RSHOU 0. DEG ,
+VARIABLE RTWIS 0. DEG ,
+VARIABLE LTWIS 0. DEG ,
+VARIABLE LATWIS 0. DEG ,
+VARIABLE RATWIS 0. DEG ,
+VARIABLE RKNEE 0. DEG ,
+VARIABLE LKNEE 0. DEG ,
+VARIABLE LELBO 0. DEG ,
+VARIABLE RELBO 0. DEG ,
+VARIABLE LANKL 0. DEG ,
+VARIABLE RANKL 0. DEG ,
+: HEAD PUSH 0. 0. 0.4 TRAN 0.2 0.23 0.3 SCAL SPHERE POP
+  PUSH 0. -0.255 0.42 TRAN 0.035 0.075 0.036 SCAL SPHERE POP
+  PUSH 0. 0. 0.07 TRAN 0.065 0.065 0.14 SCAL SPHERE POP
+  PUSH 0. -0.162 0.239 TRAN 0.0533 0.0508 0.0506 SCAL SPHERE POP
+  ;
+: UPARM PUSH 0. 0. -0.275 TRAN 0.09 0.09 0.275 SCAL SPHERE POP
+  ;
+: LOWARM PUSH 0. 0. -0.25 TRAN 0.08 0.08 0.25 SCAL SPHERE POP
+  ;
+: HAND PUSH 0. 0. -0.116 TRAN 0.052 0.091 0.155 SCAL SPHERE POP
+  ;
+: THIGH PUSH 0. 0. -0.425 TRAN 0.141 0.141 0.425 SCAL SPHERE POP
+  ;
+: CALF PUSH 0.05 0.05 0.05 SCAL SPHERE POP
+  PUSH 0. 0. -0.425 TRAN 0.1 0.1 0.425 SCAL SPHERE POP
+  ;
+: FOOT PUSH 0.05 0.04 0.04 SCAL SPHERE POP
+  PUSH 0. 0.05 -0.05 TRAN 0.04 0.04 0.04 SCAL SPHERE POP
+  PUSH 0. -0.15 -0.05 TRAN -10. DEG 1 ROT 0.08 0.19 0.05 SCAL
+  SPHERE POP
+  ;
+: LEFT_LEG PUSH THIGH 0. 0. -0.85 TRAN LKNEE @ 1 ROT CALF
+  0. 0. -0.84 TRAN LANKL @ 1 ROT FOOT POP
+  ;
+: RGHT_LEG PUSH THIGH 0. 0. -0.85 TRAN RKNEE @ 1 ROT CALF
+  0. 0. -0.84 TRAN RANKL @ 1 ROT FOOT POP
+  ;
+: LEFTARM PUSH UPARM 0. 0. -0.55 TRAN LELBO @ 1 ROT LOWARM
+  0. 0. -0.5 TRAN HAND POP
+  ;
+: RGHTARM PUSH UPARM 0. 0. -0.55 TRAN RELBO @ 1 ROT LOWARM
+  0. 0. -0.5 TRAN HAND POP
+  ;
+: SHOULDER PUSH 0.45 0.153 0.12 SCAL SPHERE POP
+  PUSH 0. 0. 0.153 TRAN NOD @ 1 ROT NECK @ 3 ROT HEAD POP
+  PUSH -0.45 0. 0. TRAN LSID @ 2 ROT LSHOU @ 1 ROT LATWIS @ 3 ROT
+  LEFTARM POP PUSH 0.45 0. 0. TRAN RSID @ 2 ROT RSHOU @ 1 ROT
+  RATWIS @ 3 ROT RGHTARM POP
+  ;
+: BODY PUSH 0. 0. 0.62 TRAN 0.306 0.21 0.5 SCAL SPHERE POP
+  PUSH 0. 0. 1. TRAN EXTEN @ 1 ROT BTWIS @ 2 ROT ROTAT @ 3 ROT
+  SHOULDER POP
+  ;
+: TORSO PUSH -0.178 0. 0. TRAN LEFT_LEG POP
+  PUSH 0.178 0. 0. TRAN RGHT_LEG POP
+  PUSH 0. 0. 0.08 TRAN 0.275 0.152 0.153 SCAL SPHERE POP
+  PUSH EXTEN @ 1 ROT BTWIS @ 2 ROT ROTAT @ 3 ROT BODY POP
+  ;
+: SCENE GRID PUSH XM @ YM @ ZM @ TRAN RZM @ 3 ROT TORSO POP
+  ;
+: WORLD FOV @ ZN @ ZF @ PERS XSCR @ YSCR @ ZSCR @ TRAN BACK @ 1 ROT
+  SPIN @ 3 ROT TILT @ 1 ROT XLOOK @ CHS YLOOK @ CHS ZLOOK @ CHS TRAN
+  1. 1. -1. SCAL SCENE
+  ;
+
+0. 0. 1. 1. VIEWPORT
+: ASTEP
+0. XM ! 0. YM !
+0. DEG NOD ! 0. DEG NECK !
+0. DEG RHIP ! 0. DEG ROUT ! 0. DEG RTWIS ! 0. DEG RKNEE !
+0. DEG LSID ! 0. DEG LATWIS ! 0. DEG LELBO !
+0. DEG RSID ! 0. DEG RSHOU ! 0. DEG RATWIS ! 0. DEG RELBO !
+80 DELAY FRAME
+PUSH WORLD POP
+-25. DEG NOD ! 28. DEG NECK !
+80 DELAY FRAME
+PUSH WORLD POP
+105. DEG RHIP ! 13. DEG ROUT ! -86. DEG RTWIS ! -53. DEG RKNEE !
+80 DELAY FRAME
+PUSH WORLD POP
+-45. DEG LSID ! -90. DEG LATWIS ! 90. DEG LELBO !
+80 DELAY FRAME
+PUSH WORLD POP
+112. DEG RSID ! 40. DEG RSHOU ! -102. DEG RATWIS ! 85. DEG RELBO !
+80 DELAY FRAME
+PUSH WORLD POP
+;
+
+: DANCE BEGIN ASTEP 1 - DUP 0 = UNTIL ;
+
+14 COLOUR
+2500 DANCE
+FINISH
+</code></pre>
+</div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

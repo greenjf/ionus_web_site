@@ -1,0 +1,210 @@
+/*<style>*/
+button {
+  color: black;
+}
+
+/*.printButton {
+  background-color: White;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+*/
+
+.showButton {
+  background-color: White;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+
+.hideButton {
+  background-color: White;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+
+.homeButton {
+  background-color: White;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+
+.homeImage {
+  width: 6em;
+  float: left;
+  /*border: 2px solid Orange;*/
+}
+
+.orangeButton {
+  background-color: Orange;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  /*border: 2px solid Orange;*/
+}
+
+.greenButton {
+  background-color: SpringGreen;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  /*border: 2px solid SpringGreen;*/
+}
+
+.blueButton {
+  background-color: Blue;
+  color: White;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  /*border: 2px solid Blue;*/
+}
+
+.redButton {
+  background-color: Red;
+  color: black;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  /*border: 2px solid Red*/
+}
+
+.printButton {
+  background-color: White;
+  color: black;
+  width: 10em;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  color: black;
+}
+
+.column {
+  float: left;
+  width: 49%;
+  text-align: center;
+  /*padding: 10px;*/
+  /*height: 300px;  Should be removed. Only for demonstration */
+  background-color: Orange;
+  border: double;
+ }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.accordion {
+  /*background-color: LightCyan;*/
+  background-color: LightYellow;
+  color: Black;
+  cursor: pointer;
+  padding: 4px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+.accordion:after {
+  /* content: '\02795';  Unicode character for "plus" sign (+) */
+  content: "details";
+  font-size: 13px;
+  color: Gray;
+  float: right;
+  margin-left: 5px;
+}
+
+.active_orange::after {
+  /* content: "\2796";  Unicode character for "minus" sign (-) */
+  content: "hide";
+  color: Gray;
+}
+
+.active_orange/*, .accordion:hover */ {
+  /*background-color: Chartreuse;*/
+  background-color: Yellow;
+  font-weight: bold;
+}
+
+.active_green::after {
+  /* content: "\2796";  Unicode character for "minus" sign (-) */
+  content: "hide";
+  color: Gray;
+}
+.active_green/*, .accordion:hover */ {
+  background-color: Chartreuse;
+  font-weight: bold;
+}
+
+.active_blue::after {
+  /* content: "\2796";  Unicode character for "minus" sign (-) */
+  content: "hide";
+  color: Black;
+}
+.active_blue/*, .accordion:hover */ {
+  background-color: CornflowerBlue;
+  /*color: White;*/
+  font-weight: bold;
+}
+
+.active_red::after {
+  /* content: "\2796";  Unicode character for "minus" sign (-) */
+  content: "hide";
+  color: Gray;
+}
+.active_red/*, .accordion:hover */ {
+  background-color: HotPink;
+  font-weight: bold;
+}
+
+
+.panelon {
+  padding: 0 4px;
+  background-color: PaleGoldenRod;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: inline;
+}
+
+.panel {
+  padding: 0 4px;
+  background-color: PaleGoldenRod;
+  text-align: left;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*</style>*/
